@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--<link rel="icon" href="<%= BASE_URL %>favicon.ico">-->
+    <link rel="icon" href="<%= BASE_URL %>logo.ico">
+    <!--<title><%= htmlWebpackPlugin.options.title %></title>-->
+    <title><%= htmlWebpackPlugin.options.isProd ? '' : 'dev - ' %>minami-songlist</title>
+
+    <% if(htmlWebpackPlugin.options.isProd){ %>
+    <!--element样式-->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/element-ui/2.15.8/theme-chalk/index.min.css">
+    <!--vant样式-->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/vant/2.12.47/index.min.css">
+
+    <script src="https://cdn.staticfile.org/vue/2.6.14/vue.min.js"></script>
+    <script src="https://cdn.staticfile.org/vuex/3.6.2/vuex.min.js"></script>
+    <script src="https://cdn.staticfile.org/vue-router/2.8.0/vue-router.min.js"></script>
+    <script src="https://cdn.staticfile.org/axios/0.27.2/axios.min.js"></script>
+    <!--element组件-->
+    <script src="https://cdn.staticfile.org/element-ui/2.15.8/index.min.js"></script>
+    <!--vant组件-->
+    <script src="https://cdn.staticfile.org/vant/2.12.47/vant.min.js"></script>
+    <% } %>
+
+    <!--网页流量监测-->
+    <script async defer data-website-id="2d26c1d5-75cd-4539-8ca4-9ca2096a5485" src="https://views.rina-songlist.live/umami.js"></script>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
